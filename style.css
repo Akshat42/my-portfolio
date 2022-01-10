@@ -1,0 +1,132 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --magneta: #e310cb;
+    --white: #f7f8fa;
+    --hotmag: #ff17e4;
+    --aqua: #86fbfb;
+    --plum: #4b0d49;
+    --sans: 'Oxygen', sans-serif;
+    --mono: 'Oxygen mono', monospace;
+    --font-size: 1.3rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--magneta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-size: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+}
+
+#intro h2 {
+    font-size: 3rem;
+}
+
+#contact-me {
+    text-align: center;
+    background-color: var(--plum);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+#contact-me p:last-child{
+    padding-top: 3rem;
+}
+
+/* nav */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+}
+
+nav [class*="fa-"] {
+    color: var(--aqua);
+    font-size: 150%;
+}
+
+nav [class*="fa-"]:hover {
+    color: var(--magneta);
+}
+
+nav h1 [class*="fa-"] {
+    color: var(--aqua);
+    font-size: 100%;
+}
+
+.main-logo {
+    margin-left: 5px;
+}
+
+
