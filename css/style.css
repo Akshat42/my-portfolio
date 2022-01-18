@@ -234,11 +234,15 @@ footer ul {
     font-size: 80%;
 }
 
+.project-keys-reverse h4 {
+    font-family: var(--mono);
+    font-size: 80%;
+}
+
 .blackbox {
     background-color: var(--black);
     padding: 1rem;
     border-radius: 10px;
-    /* width: 60%; */
     font-size: 1.2rem;
     line-height: 1.5;
 }
@@ -250,7 +254,6 @@ footer ul {
 .projects ul {
     display: flex;
     flex-flow: row wrap;
-    /* justify-content: flex-end; */
     gap: 1rem;
     list-style-type: none;
     padding: 0;
@@ -267,7 +270,7 @@ footer ul {
     border-radius: 10px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 660px) {
     .projects article {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -296,8 +299,4 @@ footer ul {
         grid-row: 1/2;
     }
 }
-
-/* .project-keys {
-    text-align: end;
-} */
 
