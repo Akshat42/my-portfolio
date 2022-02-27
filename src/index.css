@@ -1,0 +1,59 @@
+:root {
+  --black: #171321;
+  --dkblue: #0d314b;
+  --magneta: #e310cb;
+  --white: #f7f8fa;
+  --hotmag: #ff17e4;
+  --aqua: #86fbfb;
+  --plum: #4b0d49;
+  --sans: 'Oxygen', sans-serif;
+  --mono: 'Oxygen mono', monospace;
+  --font-size: 1.3rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+a {
+    color: var(--magneta);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
