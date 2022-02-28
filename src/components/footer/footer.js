@@ -10,20 +10,29 @@ const Footer = () => {
             <ul>
                 <li>
                     <a href="#github">
-                        <span class="fab fa-linkedin" aria-hidden="true"></span>
-                        <span class="sr-only">LinkedIn</span>
+                        <span
+                            className="fab fa-linkedin"
+                            aria-hidden="true"
+                        ></span>
+                        <span className="sr-only">LinkedIn</span>
                     </a>
                 </li>
                 <li>
                     <a href="#github">
-                        <span class="fab fa-github" aria-hidden="true"></span>
-                        <span class="sr-only">Github</span>
+                        <span
+                            className="fab fa-github"
+                            aria-hidden="true"
+                        ></span>
+                        <span className="sr-only">Github</span>
                     </a>
                 </li>
                 <li>
                     <a href="mail">
-                        <span class="fas fa-envelope" aria-hidden="true"></span>
-                        <span class="sr-only">E-mail</span>
+                        <span
+                            className="fas fa-envelope"
+                            aria-hidden="true"
+                        ></span>
+                        <span className="sr-only">E-mail</span>
                     </a>
                 </li>
             </ul>
