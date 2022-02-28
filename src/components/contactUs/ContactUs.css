@@ -1,0 +1,27 @@
+#contact-me {
+    width: 53%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.plum-background {
+    background-color: var(--plum);
+}
+
+#contact-me a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#contact-me p:last-child {
+    padding-top: 3rem;
+}
+
+.highlight-button {
+    background-color: var(--magneta);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--mono);
+    display: inline-block;
+}
