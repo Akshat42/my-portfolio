@@ -1,0 +1,12 @@
+.dkblue-background {
+    background-color: var(--dkblue);
+}
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.projects h2 {
+    padding: 0 0 2rem 0;
+}
