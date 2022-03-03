@@ -5,7 +5,7 @@ function Intro() {
 
     return (
         <section id="intro">
-            <p class="name">
+            <p className="name">
                 Hi, my name is <span>Akshat Divya.</span>
             </p>
 
