@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "name": "Marvel Universe",
+            "desc": "This project aims to gives us the infromation of all the Marvel Superheros in the Marvel Universe. This project uses the data from Marvel Developer Portal's REST API's.",
+            "techStack": ["HTML", "CSS", "TypeScript","Angular", "RestAPI"],
+            "gitHubLink": "https://github.com/Akshat42/marvel-universe",
+            "url": ""
+        },
+        {
+            "name": "Medium Clone",
+            "desc":"As the name says, we tried to built a clone of Medium website, where one can publish articles, can access customized feed as per the topic selected by the user. The user can follow/unfollow other users a get access to the articles published by the user the the personalized feed. I worked as a backend developer developing REST API's to be consumed by the web app. ",
+            "techStack": ["JavaScript", "NodeJs", "MongoDB", "Swagger"],
+            "gitHubLink": "https://github.com/Akshat571/turing-node-tyro",
+            "url": ""
+        }
+    ]
+}

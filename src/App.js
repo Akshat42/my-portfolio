@@ -5,10 +5,8 @@ import Header from './components/header/header';
 import Intro from './components/intro/Inro';
 import Projects from './components/projects/Projects';
 import LinearGradient from './UI/LinearGradient';
-//import firebase from 'firebase';
 
 function App() {
-    //console.log(firebase);
     return (
         <>
             <Header></Header>
