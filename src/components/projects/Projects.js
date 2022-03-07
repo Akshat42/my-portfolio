@@ -1,6 +1,7 @@
 import ProjectItem from '../../ProjectItem/ProjectItem';
 import './Projects.css';
 import { useEffect, useState } from 'react';
+import Loader from '../../loaders/Loaders';
 
 function Projects() {
     const [projects, setProjects] = useState([]);
@@ -59,7 +60,14 @@ function Projects() {
             </div>
         );
     } else {
-        return <p>Loading...</p>;
+        return (
+            <div className="dkblue-background">
+                <section className="projects">
+                    <h2>Projects I'm proud of</h2>
+                    <Loader></Loader>
+                </section>
+            </div>
+        );
     }
 }
 
