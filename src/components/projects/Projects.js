@@ -19,38 +19,41 @@ function Projects() {
         setIsLoaded(true);
     }
 
-    const loading = <p>Loading...</p>;
+    const oddClasses = ['project-keys', 'flex-end', 'image-grid'];
 
-    const project = (
-        <section className="projects">
-            <h2>Projects I'm proud of</h2>
-            {/* {console.log(projects[0].name)} */}
-            {/* <ProjectItem
-                name={projects[0].name}
-                desc={projects[0].desc}  
-                gitHubLink={projects[0].gitHubLink}
-                techStack={projects[0].techStack}
-                url={projects[0].url}
-            ></ProjectItem> */}
-        </section>
-    );
+    const evenClasses = ['project-keys-reverse', '', 'image-grid-reverse'];
 
     if (isLoaded) {
         return (
             <div className="dkblue-background">
                 <section className="projects">
                     <h2>Projects I'm proud of</h2>
-                    {projects.map((project) => {
-                        return (
-                            <ProjectItem
-                                key={project.id}
-                                name={project.name}
-                                desc={project.desc}
-                                gitHubLink={project.gitHubLink}
-                                techStack={project.techStack}
-                                url={project.url}
-                            ></ProjectItem>
-                        );
+                    {projects.map((project, index) => {
+                        if (index % 2 === 0) {
+                            return (
+                                <ProjectItem
+                                    classes={evenClasses}
+                                    key={project.id}
+                                    name={project.name}
+                                    desc={project.desc}
+                                    gitHubLink={project.gitHubLink}
+                                    techStack={project.techStack}
+                                    url={project.url}
+                                ></ProjectItem>
+                            );
+                        } else {
+                            return (
+                                <ProjectItem
+                                    classes={oddClasses}
+                                    key={project.id}
+                                    name={project.name}
+                                    desc={project.desc}
+                                    gitHubLink={project.gitHubLink}
+                                    techStack={project.techStack}
+                                    url={project.url}
+                                ></ProjectItem>
+                            );
+                        }
                     })}
                 </section>
             </div>
