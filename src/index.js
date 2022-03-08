@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { initializeApp } from 'firebase/app';
-import { fbConfig } from './config/config';
+import { BrowserRouter } from 'react-router-dom';
 
-initializeApp(fbConfig);
+//initializeApp(fbConfig);
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );

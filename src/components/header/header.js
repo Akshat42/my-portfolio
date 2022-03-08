@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './header.css';
 const Header = () => {
     return (
@@ -5,22 +6,20 @@ const Header = () => {
             <ul>
                 <li>
                     <h1>
-                        <a href="index.html">
+                        <Link to="/home">
                             <span
                                 className="fas fa-code main-logo"
                                 aria-hidden="true"
                             ></span>
                             <span>Akshat Divya</span>
-                        </a>
+                        </Link>
                     </h1>
                 </li>
                 <li>
-                    <a href="#projects">Projects</a>
+                    <a href="/home/#project">Projects</a>
                 </li>
                 <li>
-                    <a href="about.html" target="_blank">
-                        About
-                    </a>
+                    <Link to="/about">About</Link>
                 </li>
                 <li>
                     <a href="#contact-me">Contact</a>

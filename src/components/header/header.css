@@ -56,3 +56,16 @@ nav h1 [class*='fa-'] {
         margin-right: auto;
     }
 }
+
+.highlight-button {
+    background-color: var(--magneta);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--mono);
+    display: inline-block;
+}
+
+.highlight-button:hover {
+    color: var(--white);
+    background-color: var(--hotmag);
+}

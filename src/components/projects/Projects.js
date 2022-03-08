@@ -27,7 +27,7 @@ function Projects() {
     if (isLoaded) {
         return (
             <div className="dkblue-background">
-                <section className="projects">
+                <section id="project" className="projects">
                     <h2>Projects I'm proud of</h2>
                     {projects.map((project, index) => {
                         if (index % 2 === 0) {
