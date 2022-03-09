@@ -1,33 +1,24 @@
-import ProjectItem from '../../ProjectItem/ProjectItem';
+import ProjectItem from '../ProjectItem/ProjectItem';
 import './Projects.css';
-import { useEffect, useState } from 'react';
 import Loader from '../../loaders/Loaders';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+import { scroll } from '../../utility';
 
-function Projects() {
-    const [projects, setProjects] = useState([]);
-    const [isLoaded, setIsLoaded] = useState(false);
+function Projects({ isLoaded, projects, shouldScroll }) {
+    const projectsRef = useRef(null);
+    const oddClasses = ['project-keys', 'flex-end', 'image-grid'];
+    const evenClasses = ['project-keys-reverse', '', 'image-grid-reverse'];
+    const location = useLocation();
 
     useEffect(() => {
-        requestProjects();
-    }, []);
-
-    async function requestProjects() {
-        let res = await fetch(
-            'https://my-portfolio-0327-default-rtdb.firebaseio.com/projects.json'
-        );
-        let data = await res.json();
-        setProjects(data);
-        setIsLoaded(true);
-    }
-
-    const oddClasses = ['project-keys', 'flex-end', 'image-grid'];
-
-    const evenClasses = ['project-keys-reverse', '', 'image-grid-reverse'];
+        scroll(location, '#project', '/portfolio', isLoaded, projectsRef);
+    }, [shouldScroll, isLoaded, projectsRef, location]);
 
     if (isLoaded) {
         return (
             <div className="dkblue-background">
-                <section id="project" className="projects">
+                <section ref={projectsRef} id="project" className="projects">
                     <h2>Projects I'm proud of</h2>
                     {projects.map((project, index) => {
                         if (index % 2 === 0) {
@@ -62,7 +53,7 @@ function Projects() {
     } else {
         return (
             <div className="dkblue-background">
-                <section className="projects">
+                <section ref={projectsRef} className="projects">
                     <h2>Projects I'm proud of</h2>
                     <Loader></Loader>
                 </section>

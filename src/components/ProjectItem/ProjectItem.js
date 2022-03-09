@@ -9,7 +9,6 @@ function ProjectItem({
     imageUrl,
     classes,
 }) {
-    console.log(name, desc, gitHubLink, techStack, url);
     return (
         <article>
             <div className={classes[0]}>

@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import './header.css';
-const Header = () => {
+const Header = (props) => {
+    // TODO add contact-me link and configure
     return (
         <nav>
             <ul>
                 <li>
                     <h1>
-                        <Link to="/home">
+                        <Link to="/portfolio">
                             <span
                                 className="fas fa-code main-logo"
                                 aria-hidden="true"
@@ -16,13 +17,19 @@ const Header = () => {
                     </h1>
                 </li>
                 <li>
-                    <a href="/home/#project">Projects</a>
+                    <Link
+                        to={{
+                            pathname: '/portfolio',
+                            hash: '#project',
+                        }}
+                    >
+                        Projects
+                    </Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
-                </li>
-                <li>
-                    <a href="#contact-me">Contact</a>
+                    <Link to={{ pathname: '/about', state: props.refNode }}>
+                        About
+                    </Link>
                 </li>
                 <li>
                     <a
@@ -64,4 +71,5 @@ const Header = () => {
         </nav>
     );
 };
+
 export default Header;
