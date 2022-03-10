@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { scroll } from '../../utility';
 
-function Projects({ isLoaded, projects, shouldScroll }) {
+function Projects({ isLoaded, projects, shouldScroll, error }) {
     const projectsRef = useRef(null);
     const oddClasses = ['project-keys', 'flex-end', 'image-grid'];
     const evenClasses = ['project-keys-reverse', '', 'image-grid-reverse'];
@@ -47,6 +47,15 @@ function Projects({ isLoaded, projects, shouldScroll }) {
                             );
                         }
                     })}
+                </section>
+            </div>
+        );
+    } else if (error) {
+        return (
+            <div className="dkblue-background">
+                <section ref={projectsRef} className="projects">
+                    <h2>Projects I'm proud of</h2>
+                    <p className="error">{error}</p>
                 </section>
             </div>
         );

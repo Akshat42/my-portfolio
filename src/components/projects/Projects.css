@@ -10,3 +10,11 @@
 .projects h2 {
     padding: 0 0 2rem 0;
 }
+
+.error {
+    text-align: center;
+    color: red;
+    border: 1px solid red;
+    background-color: #ffbaba;
+    padding: 1%;
+}

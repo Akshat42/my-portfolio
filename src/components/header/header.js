@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import './header.css';
-const Header = (props) => {
-    // TODO add contact-me link and configure
+const Header = () => {
     return (
         <nav>
             <ul>

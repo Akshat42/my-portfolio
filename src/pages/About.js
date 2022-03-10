@@ -3,10 +3,10 @@ import LinearGradient from '../UI/LinearGradient';
 
 function About() {
     return (
-        <>
+        <div className="dkblue-background">
             <LinearGradient></LinearGradient>
             <section className="projects">
-                <h2>About Akshat Divya</h2>
+                <h2>About Akshat</h2>
                 <article>
                     <div className="project-keys">
                         <h3>Just the highlights</h3>
@@ -33,7 +33,7 @@ function About() {
             </section>
             <LinearGradient></LinearGradient>
             <ContactUs></ContactUs>
-        </>
+        </div>
     );
 }
 
