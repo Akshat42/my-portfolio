@@ -3,7 +3,6 @@ import './PageNotFound.css';
 
 function PageNotFound() {
     const location = useLocation();
-    console.log(location);
     return (
         <div className="page-not-found">
             <h2>Page not found</h2>

@@ -6,8 +6,6 @@ import About from './pages/About';
 import PageNotFound from './pages/PageNotFound';
 import Portfolio from './pages/Portfolio';
 function App() {
-    // TODO - add and configure page not found component
-
     return (
         <>
             <Header />
