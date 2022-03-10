@@ -12,7 +12,7 @@ function Projects({ isLoaded, projects, shouldScroll }) {
     const location = useLocation();
 
     useEffect(() => {
-        scroll(location, '#project', '/portfolio', isLoaded, projectsRef);
+        scroll(location, '#project', isLoaded, projectsRef, '/portfolio');
     }, [shouldScroll, isLoaded, projectsRef, location]);
 
     if (isLoaded) {

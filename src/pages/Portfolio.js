@@ -35,7 +35,7 @@ function Portfolio() {
                 shouldScroll={shouldScroll}
             />
             <LinearGradient />
-            <ContactUs />
+            <ContactUs isLoaded={isLoaded} shouldScroll={shouldScroll} />
             <LinearGradient />
             <Footer />
         </>

@@ -27,9 +27,10 @@ const Header = (props) => {
                     </Link>
                 </li>
                 <li>
-                    <Link to={{ pathname: '/about', state: props.refNode }}>
-                        About
-                    </Link>
+                    <Link to={{ hash: '#contact-me' }}>Contact</Link>
+                </li>
+                <li>
+                    <Link to={{ pathname: '/about' }}>About</Link>
                 </li>
                 <li>
                     <a
