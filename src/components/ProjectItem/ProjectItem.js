@@ -13,9 +13,9 @@ function ProjectItem({
         <article>
             <div className={classes[0]}>
                 <h3>{name}</h3>
-                <p className="blackbox">
+                <main className="blackbox">
                     {desc}
-                    <section className="m-0 p-0">
+                    <p className="m-0 p-0">
                         The code repo can be found <a href={gitHubLink}>here</a>
                         ,{' '}
                         {url && (
@@ -24,8 +24,8 @@ function ProjectItem({
                                 .
                             </span>
                         )}
-                    </section>
-                </p>
+                    </p>
+                </main>
                 <h4>Tools & Technologies used include:</h4>
                 <ul className={classes[1]}>
                     {techStack.map((tech) => {

@@ -9,7 +9,11 @@ const Footer = () => {
             </h2>
             <ul>
                 <li>
-                    <a href="#github">
+                    <a
+                        href="https://www.linkedin.com/in/akshat-divya/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <span
                             className="fab fa-linkedin"
                             aria-hidden="true"
@@ -18,7 +22,11 @@ const Footer = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="#github">
+                    <a
+                        target="_blank"
+                        href="https://github.com/Akshat42"
+                        rel="noreferrer"
+                    >
                         <span
                             className="fab fa-github"
                             aria-hidden="true"
@@ -27,7 +35,11 @@ const Footer = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="mail">
+                    <a
+                        href="mailto:akshatdivya03@gmail.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <span
                             className="fas fa-envelope"
                             aria-hidden="true"
