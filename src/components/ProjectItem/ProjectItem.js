@@ -15,8 +15,16 @@ function ProjectItem({
                 <h3>{name}</h3>
                 <p className="blackbox">
                     {desc}
-                    The code repo can be found
-                    <a href={gitHubLink}>here</a>.
+                    <section className="m-0 p-0">
+                        The code repo can be found <a href={gitHubLink}>here</a>
+                        ,{' '}
+                        {url && (
+                            <span>
+                                and the project is hosted <a href={url}>here</a>
+                                .
+                            </span>
+                        )}
+                    </section>
                 </p>
                 <h4>Tools & Technologies used include:</h4>
                 <ul className={classes[1]}>
@@ -27,7 +35,10 @@ function ProjectItem({
             </div>
             <img
                 className={classes[2]}
-                src="https://assets.codepen.io/296057/fem-gettingstartedcss-ch5-1.png"
+                src={
+                    imageUrl ||
+                    'https://assets.codepen.io/296057/fem-gettingstartedcss-ch5-1.png'
+                }
                 alt="ss"
             />
         </article>

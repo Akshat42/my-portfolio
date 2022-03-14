@@ -31,6 +31,7 @@ function Projects({ isLoaded, projects, shouldScroll, error }) {
                                     gitHubLink={project.gitHubLink}
                                     techStack={project.techStack}
                                     url={project.url}
+                                    imageUrl={project.imageUrl}
                                 ></ProjectItem>
                             );
                         } else {
@@ -43,6 +44,7 @@ function Projects({ isLoaded, projects, shouldScroll, error }) {
                                     gitHubLink={project.gitHubLink}
                                     techStack={project.techStack}
                                     url={project.url}
+                                    imageUrl={project.imageUrl}
                                 ></ProjectItem>
                             );
                         }
