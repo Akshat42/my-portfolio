@@ -32,6 +32,7 @@ function Projects({ isLoaded, projects, shouldScroll, error }) {
                                     techStack={project.techStack}
                                     url={project.url}
                                     imageUrl={project.imageUrl}
+                                    apiDocs={project.apiDocs}
                                 ></ProjectItem>
                             );
                         } else {
@@ -45,6 +46,7 @@ function Projects({ isLoaded, projects, shouldScroll, error }) {
                                     techStack={project.techStack}
                                     url={project.url}
                                     imageUrl={project.imageUrl}
+                                    apiDocs={project.apiDocs}
                                 ></ProjectItem>
                             );
                         }

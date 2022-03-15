@@ -8,6 +8,7 @@ function ProjectItem({
     url,
     imageUrl,
     classes,
+    apiDocs,
 }) {
     return (
         <article>
@@ -16,15 +17,30 @@ function ProjectItem({
                 <main className="blackbox">
                     {desc}
                     <p className="m-0 p-0">
-                        The code repo can be found <a href={gitHubLink}>here</a>
+                        The code repo can be found{' '}
+                        <a target="_blank" href={gitHubLink} rel="noreferrer">
+                            here
+                        </a>
                         ,{' '}
                         {url && (
                             <span>
-                                and the project is hosted <a href={url}>here</a>
+                                and the project is hosted{' '}
+                                <a target="_blank" href={url} rel="noreferrer">
+                                    here
+                                </a>
                                 .
                             </span>
                         )}
                     </p>
+                    {apiDocs && (
+                        <div>
+                            The API documentation can be found:{' '}
+                            <a target="_blank" href={url} rel="noreferrer">
+                                here
+                            </a>
+                            .
+                        </div>
+                    )}
                 </main>
                 <h4>Tools & Technologies used include:</h4>
                 <ul className={classes[1]}>
