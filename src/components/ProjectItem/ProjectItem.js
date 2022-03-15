@@ -1,3 +1,4 @@
+import TechStack from '../TechStack/TechStack';
 import './ProjectItem.css';
 
 function ProjectItem({
@@ -42,12 +43,7 @@ function ProjectItem({
                         </div>
                     )}
                 </main>
-                <h4>Tools & Technologies used include:</h4>
-                <ul className={classes[1]}>
-                    {techStack.map((tech) => {
-                        return <li key={tech}>{tech}</li>;
-                    })}
-                </ul>
+                <TechStack classes={classes[1]} techStack={techStack} />
             </div>
             <img
                 className={classes[2]}
