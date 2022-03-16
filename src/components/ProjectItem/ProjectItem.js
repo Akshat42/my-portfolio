@@ -36,7 +36,7 @@ function ProjectItem({
                     {apiDocs && (
                         <div>
                             The API documentation can be found:{' '}
-                            <a target="_blank" href={url} rel="noreferrer">
+                            <a target="_blank" href={apiDocs} rel="noreferrer">
                                 here
                             </a>
                             .
