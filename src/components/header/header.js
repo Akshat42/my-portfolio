@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ThemeButton from '../ThemeButton/ThemeButton';
 import './header.css';
 const Header = () => {
     return (
@@ -66,6 +67,9 @@ const Header = () => {
                     >
                         Resume
                     </a>
+                </li>
+                <li>
+                    <ThemeButton />
                 </li>
             </ul>
         </nav>
