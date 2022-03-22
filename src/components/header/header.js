@@ -1,15 +1,25 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import ThemeContext from '../../store/themeContext';
 import ThemeButton from '../ThemeButton/ThemeButton';
 import './header.css';
 const Header = () => {
+    const themeContext = useContext(ThemeContext);
     return (
-        <nav>
+        <nav className={themeContext.themeMode === 'Light' ? 'logo-light' : ''}>
             <ul>
                 <li>
                     <h1>
-                        <Link to="/portfolio">
+                        <Link
+                            to="/portfolio"
+                            className={
+                                themeContext.themeMode === 'Light'
+                                    ? 'light'
+                                    : null
+                            }
+                        >
                             <span
-                                className="fas fa-code main-logo"
+                                className="fas fa-code"
                                 aria-hidden="true"
                             ></span>
                             <span>Akshat Divya</span>
@@ -22,15 +32,32 @@ const Header = () => {
                             pathname: '/portfolio',
                             hash: '#project',
                         }}
+                        className={
+                            themeContext.themeMode === 'Light' ? 'light' : ''
+                        }
                     >
                         Projects
                     </Link>
                 </li>
                 <li>
-                    <Link to={{ hash: '#contact-me' }}>Contact</Link>
+                    <Link
+                        to={{ hash: '#contact-me' }}
+                        className={
+                            themeContext.themeMode === 'Light' ? 'light' : ''
+                        }
+                    >
+                        Contact
+                    </Link>
                 </li>
                 <li>
-                    <Link to={{ pathname: '/about' }}>About</Link>
+                    <Link
+                        to={{ pathname: '/about' }}
+                        className={
+                            themeContext.themeMode === 'Light' ? 'light' : ''
+                        }
+                    >
+                        About
+                    </Link>
                 </li>
                 <li>
                     <a

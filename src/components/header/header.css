@@ -45,6 +45,18 @@ nav h1 [class*='fa-'] {
     font-size: 100%;
 }
 
+.light {
+    color: var(--black);
+}
+
+.logo-light h1 [class*='fa-'] {
+    color: var(--aquaInvert);
+}
+
+.logo-light [class*='fa-'] {
+    color: var(--aquaInvert);
+}
+
 @media (min-width: 850px) {
     nav {
         max-width: 1200px;
