@@ -3,5 +3,5 @@
 }
 
 .App-light {
-    background-color: #faf1e6;
+    background-color: var(--white);
 }

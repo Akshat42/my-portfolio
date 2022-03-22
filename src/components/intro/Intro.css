@@ -9,14 +9,33 @@
     line-height: 1.5;
 }
 
+.light-para p {
+    color: var(--maroon);
+}
+
+.light-para h2 {
+    color: var(--maroon);
+}
+
+.light-para a {
+    color: var(--darkgreen);
+}
+
 #intro .name {
     font-family: var(--sans);
+}
+
+.default-color {
+    color: var(--aqua);
+}
+
+.light-color {
+    color: var(--darkgreen);
 }
 
 .name span {
     font-size: var(--sans);
     font-size: 4rem;
-    color: var(--aqua);
     display: block;
 }
 

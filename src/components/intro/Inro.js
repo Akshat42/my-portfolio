@@ -1,12 +1,27 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/themeContext';
 import './Intro.css';
 
 function Intro() {
     var companyName = 'Infrrd';
+    const themeCtx = useContext(ThemeContext);
 
     return (
-        <section id="intro">
+        <section
+            id="intro"
+            className={themeCtx.themeMode === 'Light' ? 'light-para' : ''}
+        >
             <p className="name">
-                Hi, my name is <span>Akshat Divya.</span>
+                Hi, my name is{' '}
+                <span
+                    className={
+                        themeCtx.themeMode === 'Light'
+                            ? 'light-color'
+                            : 'default-color'
+                    }
+                >
+                    Akshat Divya.
+                </span>
             </p>
 
             <h2>I build Web Apps.</h2>
