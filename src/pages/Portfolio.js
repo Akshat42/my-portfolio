@@ -5,6 +5,7 @@ import Intro from '../components/intro/Inro';
 import Projects from '../components/projects/Projects';
 import LinearGradient from '../UI/LinearGradient';
 import { getData } from '../service/http.service';
+import ErrorBoundary from '../components/ErrorBoundaries/ErrorBoundary';
 
 function Portfolio() {
     const [projects, setProjects] = useState([]);
@@ -33,18 +34,27 @@ function Portfolio() {
 
     return (
         <>
-            <Intro />
+            <ErrorBoundary>
+                <Intro />
+            </ErrorBoundary>
+
             <LinearGradient />
-            <Projects
-                projects={projects}
-                isLoaded={isLoaded}
-                shouldScroll={shouldScroll}
-                error={error}
-            />
+            <ErrorBoundary>
+                <Projects
+                    projects={projects}
+                    isLoaded={isLoaded}
+                    shouldScroll={shouldScroll}
+                    error={error}
+                />
+            </ErrorBoundary>
             <LinearGradient />
-            <ContactUs isLoaded={isLoaded} shouldScroll={shouldScroll} />
+            <ErrorBoundary>
+                <ContactUs isLoaded={isLoaded} shouldScroll={shouldScroll} />
+            </ErrorBoundary>
             <LinearGradient />
-            <Footer />
+            <ErrorBoundary>
+                <Footer />
+            </ErrorBoundary>
         </>
     );
 }
