@@ -11,3 +11,7 @@ footer ul {
     gap: 3rem;
     font-size: 3rem;
 }
+
+.light-font {
+    color: var(--maroon);
+}

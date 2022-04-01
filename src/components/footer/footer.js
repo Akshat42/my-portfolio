@@ -1,7 +1,10 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/themeContext';
 import './footer.css';
 const Footer = () => {
+    const themeCtx = useContext(ThemeContext);
     return (
-        <footer>
+        <footer className={themeCtx.themeMode === 'Light' ? 'light-font' : ''}>
             <h2>
                 <span>Akshat Divya</span>
                 <span> &middot; </span>
