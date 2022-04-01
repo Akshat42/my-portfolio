@@ -10,7 +10,7 @@ const Footer = () => {
                 <span> &middot; </span>
                 <span>Software Engineer</span>
             </h2>
-            <ul>
+            <ul className={themeCtx.themeMode === 'Light' ? 'green' : ''}>
                 <li>
                     <a
                         href="https://www.linkedin.com/in/akshat-divya/"

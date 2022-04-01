@@ -15,3 +15,7 @@ footer ul {
 .light-font {
     color: var(--maroon);
 }
+
+.green a {
+    color: var(--darkgreen);
+}

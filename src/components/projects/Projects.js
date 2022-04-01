@@ -1,15 +1,17 @@
 import ProjectItem from '../ProjectItem/ProjectItem';
 import './Projects.css';
 import Loader from '../../loaders/Loaders';
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { scroll } from '../../utility';
+import ThemeContext from '../../store/themeContext';
 
 function Projects({ isLoaded, projects, shouldScroll, error }) {
     const projectsRef = useRef(null);
     const oddClasses = ['project-keys', 'flex-end', 'image-grid'];
     const evenClasses = ['project-keys-reverse', '', 'image-grid-reverse'];
     const location = useLocation();
+    const themeCtx = useContext(ThemeContext);
 
     useEffect(() => {
         scroll(location, '#project', isLoaded, projectsRef, '/portfolio');
@@ -17,9 +19,21 @@ function Projects({ isLoaded, projects, shouldScroll, error }) {
 
     if (isLoaded) {
         return (
-            <div className="dkblue-background">
+            <div
+                className={
+                    themeCtx.themeMode === 'Light'
+                        ? 'very-light-blue-background'
+                        : 'dkblue-background'
+                }
+            >
                 <section ref={projectsRef} id="project" className="projects">
-                    <h2>Projects I'm proud of</h2>
+                    <h2
+                        className={
+                            themeCtx.themeMode === 'Light' ? 'light' : ''
+                        }
+                    >
+                        Projects I'm proud of
+                    </h2>
                     {projects.map((project, index) => {
                         if (index % 2 === 0) {
                             return (

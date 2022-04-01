@@ -51,6 +51,19 @@
     padding: 0;
 }
 
+.aqua-invert {
+    color: var(--aquaInvert) !important;
+}
+
+.aqua-invert-border {
+    border-color: var(--aquaInvert) !important;
+}
+
+.blackbox-light {
+    color: var(--black);
+    background-color: var(--lightgrey);
+}
+
 @media (min-width: 660px) {
     .projects article {
         display: grid;

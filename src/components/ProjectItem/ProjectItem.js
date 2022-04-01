@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import ThemeContext from '../../store/themeContext';
 import TechStack from '../TechStack/TechStack';
 import './ProjectItem.css';
 
@@ -11,11 +13,24 @@ function ProjectItem({
     classes,
     apiDocs,
 }) {
+    const themeCtx = useContext(ThemeContext);
     return (
         <article>
             <div className={classes[0]}>
-                <h3>{name}</h3>
-                <main className="blackbox">
+                <h3
+                    className={
+                        themeCtx.themeMode === 'Light' ? 'aqua-invert' : ''
+                    }
+                >
+                    {name}
+                </h3>
+                <main
+                    className={
+                        themeCtx.themeMode === 'Light'
+                            ? 'blackbox blackbox-light'
+                            : 'blackbox'
+                    }
+                >
                     {desc}
                     <p className="m-0 p-0">
                         The code repo can be found{' '}
@@ -46,7 +61,11 @@ function ProjectItem({
                 <TechStack classes={classes[1]} techStack={techStack} />
             </div>
             <img
-                className={classes[2]}
+                className={
+                    themeCtx.themeMode === 'Light'
+                        ? `${classes[2]} aqua-invert-border`
+                        : `${classes[2]}`
+                }
                 src={
                     imageUrl ||
                     'https://assets.codepen.io/296057/fem-gettingstartedcss-ch5-1.png'
