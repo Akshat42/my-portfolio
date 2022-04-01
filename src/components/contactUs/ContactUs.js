@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import './ContactUs.css';
 import { scroll } from '../../utility';
 import { useLocation } from 'react-router-dom';
+import ThemeContext from '../../store/themeContext';
 const ContactUs = ({ isLoaded, shouldScroll }) => {
     const contactRef = useRef(null);
     const location = useLocation();
+    const themeContext = useContext(ThemeContext);
 
     useEffect(() => {
         if (location.pathname === '/about') {
@@ -15,7 +17,13 @@ const ContactUs = ({ isLoaded, shouldScroll }) => {
     }, [shouldScroll, isLoaded, location]);
 
     return (
-        <div className="plum-background">
+        <div
+            className={
+                themeContext.themeMode === 'Light'
+                    ? 'light-background'
+                    : 'plum-background'
+            }
+        >
             <section ref={contactRef} id="contact-me">
                 <h2>Contact Me</h2>
                 <p>

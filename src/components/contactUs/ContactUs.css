@@ -25,3 +25,8 @@
     font-family: var(--mono);
     display: inline-block;
 }
+
+.light-background {
+    background-color: var(--lightSoil);
+    color: var(--maroon);
+}
