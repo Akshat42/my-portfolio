@@ -1,7 +1,10 @@
 import './Intro.css';
 
 function Intro() {
-    var companyName = 'Infrrd';
+    const companyName = 'CAW Studios';
+    const clientUrl1 = 'https://www.radian.com/'
+    const clientUrl2 = 'https://www.cashflo.io/'
+    const clientUrl3 = 'http://www.officeadvisor.in/'
 
     return (
         <section id="intro">
@@ -20,12 +23,26 @@ function Intro() {
                 {`Currently, I'm working at `}
                 <a
                     rel="noreferrer"
-                    href="https://www.infrrd.ai"
+                    href="https://www.cawstudios.com"
                     target="_blank"
                 >
                     {companyName}
                 </a>
-                , developing web application for a real estate client.
+                , developing web applications for clients such as <a
+                    rel="noreferrer"
+                    href={clientUrl1}
+                    target="_blank"
+                >
+                    Radian</a>&nbsp; and <a
+                    rel="noreferrer"
+                    href={clientUrl2}
+                    target="_blank"
+                >Office Advisor</a>&nbsp; in real estate, and <a
+                    rel="noreferrer"
+                    href={clientUrl3}
+                    target="_blank"
+                >
+                    Cashflo</a>&nbsp; in finance.
             </p>
         </section>
     );
