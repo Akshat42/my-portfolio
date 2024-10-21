@@ -37,7 +37,6 @@ function Portfolio() {
             <ErrorBoundary>
                 <Intro />
             </ErrorBoundary>
-
             <LinearGradient />
             <ErrorBoundary>
                 <Projects
